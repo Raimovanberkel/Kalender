@@ -8,9 +8,9 @@
 		$currentmaand = $birthday['maand'];
 		$currentdag = null;
 	}
-	if ($currentdag != $birthday['dag']) {
+	if ($currentDag != $birthday['dag']) {
 		echo "<h2>" . $birthday['dag'] . "</h2>";
-		$currentdag = $birthday['dag'];
+		$currentDag = $birthday['dag'];
 	} ?>
 
 <p>

@@ -31,12 +31,12 @@ function editBirthday() {
 	}
 	
 	$db = openDatabaseConnection();
-	$sql = "UPDATE birthdays SET person = :person, maaand = :maand, dag = :dag, jaar = :jaar WHERE id = :id";
+	$sql = "UPDATE birthdays SET person = :person, maand = :maand, dag = :dag, jaar = :jaar WHERE id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':person' => $person,
 		':maand' => $maand,
-		':maand' => $maand,
+		':dag' => $dag,
 		':jaar' => $jaar,
 		':id' => $id));
 	$db = null;
@@ -72,9 +72,10 @@ function createBirthday() {
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':person' => $person,
-		':day' => $dag,
+		':dag' => $dag,
 		':maand' => $maand,
 		':jaar' => $jaar));
 	$db = null;
 	return true;
 }
+
