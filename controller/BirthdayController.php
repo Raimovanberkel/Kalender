@@ -43,3 +43,11 @@ function delete($id) {
 	}
 	header("Location:" . URL . "birthday/index");
 }
+
+	function tag(){
+		echo "<pre>";
+		var_dump(getAllBirthdays());
+		echo "</pre>";
+		
+		die("tag");
+	}

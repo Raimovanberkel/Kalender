@@ -1,5 +1,4 @@
 <?php
-
 function getBirthday($id) {
 	$db = openDatabaseConnection();
 	$sql = "SELECT * FROM birthdays WHERE id = :id";
